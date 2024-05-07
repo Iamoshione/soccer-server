@@ -1,0 +1,17 @@
+{
+  "name": "soccer",
+  "version": "1.0.0",
+  "description": "simple soccer server ",
+  "main": "index.mjs ",
+  "author": "oshione ",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./index.mjs"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.9.9",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.8.1",
+    "nodemon": "^3.1.0"
+  }
+}
