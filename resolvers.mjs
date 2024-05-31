@@ -15,7 +15,8 @@ export const resolvers = {
     teamInfo: async (parent, { competition }) => {
       try {
         const response = await fetch(
-          `https://api.sportsdata.io/v4/soccer/scores/json/CompetitionDetails/${competition}?key=48e0a108abfa41d99adf4abf9934efcc`
+          `https://api.sportsdata.io/v4/soccer/scores/json/CompetitionDetails/${competition}?key=c31aeae5ee5a4d48aecbd09e94ebc7fc
+          `
         );
         const data = await response.json();
         return [data];
@@ -25,7 +26,8 @@ export const resolvers = {
     },
     standings_feed:async(parent,{competition})=>{
       try {
-        const response = await fetch(`https://api.sportsdata.io/v4/soccer/scores/json/Standings/${competition}/2024?key=48e0a108abfa41d99adf4abf9934efcc`)
+        const response = await fetch(`https://api.sportsdata.io/v4/soccer/scores/json/Standings/${competition}/2024?key=c31aeae5ee5a4d48aecbd09e94ebc7fc
+        `)
         const data = await response.json()
         return data
       } catch (error) {
@@ -34,7 +36,8 @@ export const resolvers = {
     },
     playerSeasonStats: async(parent,{competition,year})=>{
       try {
-        const response = await fetch(`https://api.sportsdata.io/v4/soccer/stats/json/PlayerSeasonStats/${competition}/${year}?key=48e0a108abfa41d99adf4abf9934efcc`)
+        const response = await fetch(`https://api.sportsdata.io/v4/soccer/stats/json/PlayerSeasonStats/${competition}/${year}?key=c31aeae5ee5a4d48aecbd09e94ebc7fc
+        `)
         const data = await response.json()
         return data
       } catch (error) {
@@ -43,7 +46,8 @@ export const resolvers = {
     },
     teamSeasonStats : async(parent,{competition})=>{
       try {
-        const response = await fetch(`https://api.sportsdata.io/v4/soccer/scores/json/TeamSeasonStats/${competition}/2024?key=48e0a108abfa41d99adf4abf9934efcc`)
+        const response = await fetch(`https://api.sportsdata.io/v4/soccer/scores/json/TeamSeasonStats/${competition}/2024?key=c31aeae5ee5a4d48aecbd09e94ebc7fc
+        `)
         const data = response.json()
         return data
       } catch (error) {
@@ -52,7 +56,7 @@ export const resolvers = {
     },
     boxscore : async(parent,{competition,gameid})=>{
       try {
-         const response = await fetch(`https://api.sportsdata.io/v4/soccer/stats/json/BoxScore/${competition}/${gameid}?key=48e0a108abfa41d99adf4abf9934efcc`)
+         const response = await fetch(`https://api.sportsdata.io/v4/soccer/stats/json/BoxScore/${competition}/${gameid}?key=c31aeae5ee5a4d48aecbd09e94ebc7fc`)
          const data = await response.json()
          return data;
       } catch (error) {
