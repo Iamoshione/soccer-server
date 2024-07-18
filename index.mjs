@@ -3,7 +3,7 @@ import { typeDefs } from "./schema.mjs";
 import { resolvers } from "./resolvers.mjs";
 
 const API_PORT = process.env.PORT || 403;
-const API_HOST = process.env.HOST || '192.168.40.204'
+const API_HOST = process.env.HOST || '127.0.0.1'
 
 const server = new ApolloServer({
     typeDefs,
